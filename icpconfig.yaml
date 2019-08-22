@@ -2,7 +2,7 @@ apiVersion: v1
 clusters:
 - cluster:
     insecure-skip-tls-verify: true
-    server: https://174.37.17.188:8443
+    server: https://174.37.17.188:8001
   name: optumera
 contexts:
 - context:
