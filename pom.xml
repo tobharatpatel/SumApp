@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.wasdev.wlp.sample</groupId>
-    <artifactId>sumapp</artifactId>
+    <artifactId>SumApp</artifactId>
     <version>0.1.0</version>
     <packaging>war</packaging>
 
-    <name>sum app</name>
+    <name>Sum App</name>
     <url>https://wasdev.github.io</url>
 
     <licenses>
