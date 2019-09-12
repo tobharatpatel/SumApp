@@ -7,7 +7,7 @@
     <version>0.1.0</version>
     <packaging>war</packaging>
 
-    <name>Sum App</name>
+    <name>sum app</name>
     <url>https://wasdev.github.io</url>
 
     <licenses>
