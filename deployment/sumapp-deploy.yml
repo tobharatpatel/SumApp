@@ -1,23 +1,22 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: bpatel-sumapp
-  namespace : coe
+  name: $appname
   labels:
-    app: bpatel-sumapp
+    app: $appname
 spec:
   selector:
     matchLabels:
-      app: bpatel-sumapp
+      app: $appname
   replicas: 1
   template:
     metadata:
       labels:
-        app: bpatel-sumapp
+        app: $appname
     spec:
       containers:
-      - name: bpatel-sumapp
-        image: optumera.icp:8500/coe/bpatel-sumapp
+      - name: $appname
+        image: $targetrepo/$appname
         imagePullPolicy: Always
         ports:
         - containerPort: 9080       
@@ -25,14 +24,13 @@ spec:
 apiVersion: v1        
 kind: Service
 metadata:
-  name: bpatel-sumapp
-  namespace : coe	  
+  name: $appname
   labels:
-    app: bpatel-sumapp
+    app: $appname
 spec:
   type: NodePort
   ports:
     - port: 80
       targetPort: 9080
   selector:
-   app: bpatel-sumapp
+   app: $appname
